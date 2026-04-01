@@ -54,8 +54,8 @@ captive_portal:
 #According to the ESP32-C6 datasheet, GPIO16 is UART0 TXD and GPIO17 is UART0 RXD.
 uart:
   id: uart_bus
-  tx_pin: GPIO16
-  rx_pin: GPIO17
+  tx_pin: GPIO17
+  rx_pin: GPIO16
   baud_rate: 9600
   data_bits: 8
   parity: EVEN
