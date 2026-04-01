@@ -34,6 +34,7 @@ Connect the ESP32 to the Altherma unit using the X10A connector:
 | 4 - NC  | Not connected                            | Not connected
 | 5 - GND | GND                                      | G
 
+![Wiring](img/wiring.png)
 Refer to the [ESPAltherma wiring guide](https://github.com/raomin/ESPAltherma?tab=readme-ov-file#daikin-altherma-4-pin-x10a-connection) for additional details.
 
 ## Successfull installs
