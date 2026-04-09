@@ -34,7 +34,7 @@ Connect the ESP32 to the Altherma unit using the X10A connector:
 | 4 - NC  | Not connected                            | Not connected
 | 5 - GND | GND                                      | G
 
-    ![esp32-c6-wroom-1 dev board wiring](img/wiring.png)
+  ![Browser Install](img/wiring.png)
 Refer to the [ESPAltherma wiring guide](https://github.com/raomin/ESPAltherma?tab=readme-ov-file#daikin-altherma-4-pin-x10a-connection) for additional details.
 
 ## Successfull installs
@@ -54,7 +54,7 @@ Refer to the [ESPAltherma wiring guide](https://github.com/raomin/ESPAltherma?ta
 ### Install through the browser / ESP Web Tools
 
 * Open https://jjohnsen.github.io/esphome-altherma/ and click **Connect**:
-  ![Browser Install](img/browser-install-1.png)
+  ![Wiring](img/browser-install-1.png)
 * Follow the guided installation process:
   * Install firmware
   * Connect to Wi-Fi
