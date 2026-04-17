@@ -1,0 +1,38 @@
+packages:
+  base: !include base.yaml
+
+esp32:
+  variant: esp32c6
+  framework:
+    type: esp-idf
+
+# Internal sensors
+sensor:
+  - platform: internal_temperature
+    name: "Internal Temperature"
+    device_class: "temperature"
+    state_class: "measurement"
+    unit_of_measurement: "°C"
+    update_interval: 60s
+
+  - platform: wifi_signal
+    name: "WiFi Signal Strength"
+    update_interval: 60s
+
+  - platform: uptime
+    name: "Uptime"
+
+# Enable logging
+logger:
+    
+captive_portal:
+
+#According to the Seedstudio XIAO ESP32-C6 datasheet
+uart:
+  id: uart_bus
+  tx_pin: GPIO17
+  rx_pin: GPIO16
+  baud_rate: 9600
+  data_bits: 8
+  parity: EVEN
+  stop_bits: 1
