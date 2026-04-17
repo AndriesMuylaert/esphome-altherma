@@ -48,7 +48,7 @@ No command line needed. See [Installation](#installation) for more options.
 
 Connect the ESP32 to the Altherma unit using the X10A connector:
 
-| X10A Pin | Signal | ESP32 DevKit | M5Stack AtomS3 Lite / ESP32-S3 |
+| X10A Pin | Signal | ESP32 DevKit / ESP32-C6 | M5Stack AtomS3 Lite / ESP32-S3 |
 | -- | -- | -- | -- |
 | 1 | 5V | 5V / VIN | 5V |
 | 2 | TX (pump → ESP) | RX pin (GPIO 16) | RX pin (GPIO 2) |
@@ -64,13 +64,12 @@ Refer to the [ESPAltherma wiring guide](https://github.com/raomin/ESPAltherma?ta
 
 | Board                  | Heat Pump                                | User      | Additional info
 | --                     | --                                       | --        | --
-| Generic esp32-c6-wroom-1 dev board | ERLQ11CAV3 / EHBH16W9W       | @AndriesMuylaert | This repo :)
 | Generic esp32dev board | ERGA08DAV3 / EHVH08S23DA6V               | @jjohnsen | Source repo
 | M5Stack AtomS3 Lite    | DAIKIN Altherma 3 R Ech2o / EHSXB08P30EF | @maromme  | https://github.com/jjohnsen/esphome-altherma/discussions/4
 | DOIT ESP32 DEVKIT V1   | EHVX08S26CB9W                            | @MaBeniu  | https://github.com/jjohnsen/esphome-altherma/discussions/5
 | esp32dev | ERLQ011CAV3 / EHBX11CB9W || [Detailed setup guide in French](https://domo.rem81.com/index.php/2026/01/12/ha-monitoring-de-ma-pac-daikin-altherma-avec-esphome-esphome-altherma-alternative-a-espaltherma/)
 | ESP32-C6-WROOM-1       | EHBH16C9W                         | @AndriesMuylaert | Includes relay + onboard sensors - https://github.com/jjohnsen/esphome-altherma/discussions/11
-| XIAO ESP32-C6          | EHBH16C9W                         | @AndriesMuylaert | Includes onboard sensors - https://github.com/jjohnsen/esphome-altherma/discussions/11
+| Seed XIAO ESP32-C6     | EHBH16C9W                         | @AndriesMuylaert | Includes onboard sensors
 
 ## Installation
 
