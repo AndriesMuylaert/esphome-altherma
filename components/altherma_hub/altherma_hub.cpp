@@ -1,3 +1,4 @@
+#define ALTHERMA_HUB_IMPL
 #include "altherma_hub.h"
 #include "esphome/core/log.h"
 #include "mock_uart.h"
@@ -23,6 +24,9 @@ LabelDef labelDefs[] = {};
 //}
 namespace esphome {
 namespace altherma_hub {
+  #ifndef ALTHERMA_HUB_IMPL
+  #error ALTHERMA_HUB_IMPL is not defined here
+  #endif
   #include "converters.h"
 
 static const char *TAG = "altherma_hub";
