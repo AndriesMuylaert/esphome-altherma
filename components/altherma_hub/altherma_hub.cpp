@@ -24,9 +24,6 @@ LabelDef labelDefs[] = {};
 //}
 namespace esphome {
 namespace altherma_hub {
-  #ifndef ALTHERMA_HUB_IMPL
-  #error ALTHERMA_HUB_IMPL is not defined here
-  #endif
   #include "converters.h"
 
 static const char *TAG = "altherma_hub";
@@ -219,9 +216,11 @@ void AlthermaHub::handle_complete_frame_() {
     }
   }
 
-  auto delta = millis() - this->query_started_at_;
-  ESP_LOGD(TAG, "Query register 0x%02x OK CRC: 0x%02x Length: 0x%02x Time: %d ms",
-           this->rx_buffer_[1], this->rx_buffer_[this->rx_len_ - 1], this->rx_buffer_[2], delta);
+   // in handle_complete_frame_()
+   auto delta = millis() - this->query_started_at_;
+   ESP_LOGD(TAG, "Query register 0x%02x OK CRC: 0x%02x Length: 0x%02x Time: %lu ms",
+			 this->rx_buffer_[1], this->rx_buffer_[this->rx_len_ - 1], this->rx_buffer_[2],
+         (unsigned long) delta);
   this->advance_register_();
 }
 
@@ -230,8 +229,9 @@ void AlthermaHub::advance_register_() {
   if (this->register_index_ >= this->registers_.size()) {
     this->poll_active_ = false;
     this->query_state_ = QueryState::IDLE;
+    // in advance_register_()
     const auto update_delta = millis() - this->cycle_started_at_;
-    ESP_LOGD(TAG, "Update end (%u ms)", update_delta);
+    ESP_LOGD(TAG, "Update end (%lu ms)", (unsigned long) update_delta);
     return;
   }
 
