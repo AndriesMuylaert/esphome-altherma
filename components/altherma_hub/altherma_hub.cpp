@@ -1,3 +1,4 @@
+#define ALTHERMA_HUB_IMPL
 #include "altherma_hub.h"
 #include "esphome/core/log.h"
 #include "mock_uart.h"

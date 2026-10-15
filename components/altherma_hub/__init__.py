@@ -33,10 +33,10 @@ async def to_code(config):
     await uart.register_uart_device(var, config)
 
     # Get the absolute path to the lib directory
-    lib_path = Path(__file__).parent / "lib"
+    #lib_path = Path(__file__).parent / "lib"
     
     # Add as extra script to copy files
-    cg.add_platformio_option("build_flags", [f"-I{lib_path.as_posix()}"])
+    #cg.add_platformio_option("build_flags", [f"-I{lib_path.as_posix()}"])
 
 
 # Shared configuration constants
